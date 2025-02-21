@@ -4,7 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Профессиональные услуги по разработке пользовательского интерфейса для встраиваемых систем">
+    <meta name="keywords" content="">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Разработка пользовательского интерфейса">
+    <meta property="og:description"
+        content="РПрофессиональные услуги по разработке пользовательского интерфейса для встраиваемых систем">
+    <meta property="og:image" content="./images/hero.svg">
+    <meta property="og:site_name" content="Ремонт телефонов и ноутбуков в Пензе">
     <title>Соло Лаб</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
@@ -16,15 +30,14 @@
             <img class="logo" src="./images/logo.svg" alt="Логотип Соло Лаб">
             <nav class="nav header__nav">
                 <ul class="nav__list list-reset">
-                    <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Проекты</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Технологии</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Как мы работаем</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Виды деятельности</a></li>
+                    <li class="nav__item"><a class="nav__link link" href="#projects">Проекты</a></li>
+                    <li class="nav__item"><a class="nav__link link" href="#technologies">Технологии</a></li>
+                    <li class="nav__item"><a class="nav__link link" href="#work">Этапы</a></li>
+                    <li class="nav__item"><a class="nav__link link" href="#activity">Деятельность</a></li>
                 </ul>
             </nav>
             <div class="header__social social">
-                <a class="social__button btn btn-reset" aria-label="Написать в телеграм">
+                <a class="social__button btn btn-reset" href="#" aria-label="Написать в телеграм">
                     <svg class="social__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -37,7 +50,7 @@
     </header>
 
     <main>
-        <section class="section hero">
+        <section id="hero" class="section hero">
             <div class="container hero__container">
                 <div class="hero__content">
                     <h1 class="hero__title">
@@ -54,16 +67,17 @@
                     </p>
                 </div>
                 <div class="hero__image">
-                    <img src="./images/hero.svg" alt="">
+                    <img src="./images/hero.svg" alt="Изображение Соло Лаб">
                 </div>
             </div>
         </section>
-        <section class="section services">
+
+        <section id="services" class="section services">
             <div class="container services__container">
                 <h2 class="services__title visually-hidden">Наши услуги</h2>
                 <ul class="services__list list-reset">
                     <li class="services__card services-card services-card--language">
-                        <img class="services-card__image" src="./images/services_1.svg" alt="">
+                        <img class="services-card__image" src="./images/services_1.svg" alt="Разработка на языке Си">
                         <h3 class="services-card__title">Разработка на&nbsp;языке&nbsp;Си</h3>
                         <p class="services-card__descr">
                             Безусловно, язык программирования&nbsp;Cи играет ключевую роль
@@ -74,7 +88,7 @@
                     </li>
 
                     <li class="services__card services-card services-card--software">
-                        <img class="services-card__image" src="./images/services_2.png" alt="">
+                        <img class="services-card__image" src="./images/services_2.png" alt="Встроенное ПО">
                         <h3 class="services-card__title">Встроенное ПО&nbsp;на&nbsp;базе&nbsp;ОС</h3>
                         <p class="services-card__descr">
                             По&nbsp;мере увеличения сложности проекта одного языка становится недостаточно. В&nbsp;дело
@@ -85,7 +99,8 @@
                     </li>
 
                     <li class="services__card services-card services-card--control">
-                        <img class="services-card__image" src="./images/services_3.png" alt="">
+                        <img class="services-card__image" src="./images/services_3.png"
+                            alt="Гибкое управление разработкой">
                         <h3 class="services-card__title">Гибкое управление разработкой</h3>
                         <p class="services-card__descr">
                             С&nbsp;ростом сложности появляются новые методологии разработки ПО. Мы&nbsp;применяем
@@ -95,27 +110,292 @@
                     </li>
 
                     <li class="services__card services-card services-card--support">
-                        <img class="services-card__image" src="./images/services_4.png" alt="">
+                        <img class="services-card__image" src="./images/services_4.png" alt="Поддержка">
                         <h3 class="services-card__title">Поддержка</h3>
                         <p class="services-card__descr">
-                            Разработка никогда не&nbsp;заканчивается. Даже самые простые проекты требуют постоянного внимания. В&nbsp;ходе эксплуатации могут возникать ошибки, появляться новые запросы и&nbsp;желание улучшить продукт. Мы&nbsp;предлагаем услуги по&nbsp;обслуживанию проекта и&nbsp;после его завершения.
+                            Разработка никогда не&nbsp;заканчивается. Даже самые простые проекты требуют постоянного
+                            внимания. В&nbsp;ходе эксплуатации могут возникать ошибки, появляться новые запросы
+                            и&nbsp;желание улучшить продукт. Мы&nbsp;предлагаем услуги по&nbsp;обслуживанию проекта
+                            и&nbsp;после его завершения.
                         </p>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="section projects">
+        <section id="projects" class="section projects">
             <div class="container projects__container">
                 <h2 class="section__title projects__title">Проекты</h2>
                 <ul class="projects__list list-reset">
                     <li class="projects__card projects-card">
+                        <div class="projects-card__hashtags">
+                            <span>new</span>
+                            <span>open source</span>
+                            <span>new</span>
+                        </div>
+                        <img class="projects-card__img" src="./images/projects_1.png" alt="Панель управления">
                         <h3 class="projects-card__title">Панель управления</h3>
+                        <p class="projects-card__descr">
+                            Панель управления позволяет создавать интерфейсы управления различным оборудованием
+                            использующие протокол modbus. По&nbsp;интерфейсам RS485 или Wi-Fi
+                        </p>
+                    </li>
+
+                    <li class="projects__card projects-card">
+                        <div class="projects-card__hashtags">
+                            <span>new</span>
+                            <span>open source</span>
+                            <span>new</span>
+                        </div>
+                        <img class="projects-card__img" src="./images/projects_2.png"
+                            alt="Собственная библиотека modbus">
+                        <h3 class="projects-card__title">Собственная библиотека modbus</h3>
+                        <p class="projects-card__descr">
+                            Нами разработана библиотека modbus. Мы&nbsp;в&nbsp;процессе разработки инструментов
+                            разработчика для ускорения разработки устройств modbus.
+                        </p>
+                    </li>
+
+                    <li class="projects__card projects-card">
+                        <div class="projects-card__hashtags">
+                            <span>new</span>
+                            <span>open source</span>
+                            <span>new</span>
+                        </div>
+                        <img class="projects-card__img" src="./images/projects_3.png" alt="Разработка Embeded Linux">
+                        <h3 class="projects-card__title">Разработка Embeded Linux</h3>
+                        <p class="projects-card__descr">
+                            Разработка с&nbsp;использованием операционной системы Linux
+                        </p>
                     </li>
                 </ul>
             </div>
         </section>
+
+        <section id="technologies" class="section technologies">
+            <div class="container technologies__container">
+                <h2 class="section__title technologies__title">С&nbsp;какими технологиями мы&nbsp;работаем</h2>
+                <ul class="technologies__list list-reset">
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_1.svg" alt="Язык программирования Си">
+                        <span>язык программирования&nbsp;Си</span>
+                    </li>
+
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_2.svg" alt="графическая библиотека">
+                        <span>графическая библиотека LVGL</span>
+                    </li>
+
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_3.svg" alt="операционные системы">
+                        <span>операционные системы: bare metal, rtos, linux</span>
+                    </li>
+
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_7.svg" alt="интерфейсы">
+                        <span>интерфейсы: SPI, RS-232, RS-485, CAN, I2C, UART, Ethernet, WiFi</span>
+                    </li>
+
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_5.svg"
+                            alt="протоколы передачи данных">
+                        <span>протоколы передачи данных: HTTP/HTTPS, Modbus, Modbus TCP/IP</span>
+                    </li>
+
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_6.svg" alt="архитектуры">
+                        <span>архитектуры: arm, risc-v</span>
+                    </li>
+
+                    <li class="technologies__item">
+                        <img class="technologies__img" src="./images/technologies_4.svg" alt="панели управления">
+                        <span>любые панели управления, в&nbsp;том числе JLV135</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="work" class="section work">
+            <div class="container work__container">
+                <h2 class="section__title work__title">Как мы работаем</h2>
+                <ul class="work__list list-reset">
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="01">
+                            <h3 class="work-item__title">Анализ требований</h3>
+                            <p class="work-item__descr">Уточняем цель и&nbsp;задачи проекта. Производим грубую оценку
+                                его сложности и&nbsp;объема работ</p>
+                        </div>
+                    </li>
+
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="02">
+                            <h3 class="work-item__title">Обсуждение проекта и&nbsp;составление&nbsp;ТЗ</h3>
+                            <p class="work-item__descr">Созваниваемся с&nbsp;заказчиком и&nbsp;уточняем детали
+                                и&nbsp;требования к&nbsp;проекту. Составляем техническое задание. Согласовываем бюджет
+                                и&nbsp;сроки./p>
+                        </div>
+                    </li>
+
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="03">
+                            <h3 class="work-item__title">Подписание договора</h3>
+                            <p class="work-item__descr">Заключаем договор на&nbsp;контрактную разработку встроенного ПО.
+                                Подписываем соглашение о&nbsp;неразглашении. Формируем команду</p>
+                        </div>
+                    </li>
+
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="04">
+                            <h3 class="work-item__title">Проектирование</h3>
+                            <p class="work-item__descr">Проектируем архитектуру встроенного&nbsp;ПО с&nbsp;учетом
+                                функциональных особенностей и&nbsp;аппаратного обеспечения устройства. Выбираем
+                                инструменты разработки, среду и&nbsp;язык программирования</p>
+                        </div>
+                    </li>
+
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="05">
+                            <h3 class="work-item__title">Разработка</h3>
+                            <p class="work-item__descr">Приступаем к&nbsp;написанию кода. Регулярно отчитываемся
+                                о&nbsp;проделанной работе по&nbsp;телефону, почте или видеосвязи. Если нужно, вносим
+                                изменения.</p>
+                        </div>
+                    </li>
+
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="06">
+                            <h3 class="work-item__title">Тестирование и отладка</h3>
+                            <p class="work-item__descr">Тестируем устройство и&nbsp;проверяем работоспособность ПО.
+                                Выявляем и&nbsp;устраняем ошибки</p>
+                        </div>
+                    </li>
+
+                    <li class="work__item work-item work-item--left">
+                        <div class="work-item__box" data-work="07">
+                            <h3 class="work-item__title">Гарантийный период</h3>
+                            <p class="work-item__descr">По&nbsp;завершении разработки начинается гарантийный период.
+                                Если обнаружатся новые ошибки, мы&nbsp;устраним их&nbsp;бесплатно</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="activity" class="section activity">
+            <div class="container activity__container">
+                <h2 class="section__title activity__title">Виды деятельности</h2>
+                <ul class="activity__list list-reset">
+                    <li class="activity__card activity-card">
+                        <div class="activity-card__content">
+                            <h3 class="activity-card__title">Консультация</h3>
+                            <p class="activity-card__descr">
+                                Наши консультационные услуги идеально подходят для проектов, требующих экспертного
+                                руководства. Начинаете&nbsp;ли вы&nbsp;новый проект или оптимизируете существующий,
+                                мы&nbsp;предоставляем:
+                            </p>
+                            <ul class="activity-card__list list-reset">
+                                <li class="activity-card__item">Стратегические рекомендации по&nbsp;интеграции
+                                    и&nbsp;использованию LVGL</li>
+                                <li class="activity-card__item">Оптимизация производительности и&nbsp;передовой опыт
+                                </li>
+                                <li class="activity-card__item">Устранение неполадок и&nbsp;решение сложных проблем</li>
+                            </ul>
+                        </div>
+                        <div class="activity-card__price" data-price="/ час">₽1000</div>
+                    </li>
+
+                    <li class="activity__card activity-card">
+                        <div class="activity-card__content">
+                            <h3 class="activity-card__title">Разработка</h3>
+                            <p class="activity-card__descr">
+                                Наши консультационные услуги идеально подходят для проектов, требующих экспертного
+                                руководства. Начинаете&nbsp;ли вы&nbsp;новый проект или оптимизируете существующий,
+                                мы&nbsp;предоставляем:
+                            </p>
+                            <ul class="activity-card__list list-reset">
+                                <li class="activity-card__item">Стратегические рекомендации по&nbsp;интеграции
+                                    и&nbsp;использованию LVGL</li>
+                                <li class="activity-card__item">Оптимизация производительности и&nbsp;передовой опыт
+                                </li>
+                                <li class="activity-card__item">Устранение неполадок и&nbsp;решение сложных проблем</li>
+                            </ul>
+                        </div>
+                        <div class="activity-card__price" data-price="/ час">₽1999</div>
+                    </li>
+
+                    <li class="activity__card activity-card">
+                        <div class="activity-card__content">
+                            <h3 class="activity-card__title">Сопровождение</h3>
+                            <p class="activity-card__descr">
+                                Наши консультационные услуги идеально подходят для проектов, требующих экспертного
+                                руководства. Начинаете&nbsp;ли вы&nbsp;новый проект или оптимизируете существующий,
+                                мы&nbsp;предоставляем:
+                            </p>
+                            <ul class="activity-card__list list-reset">
+                                <li class="activity-card__item">Стратегические рекомендации по&nbsp;интеграции
+                                    и&nbsp;использованию LVGL</li>
+                                <li class="activity-card__item">Оптимизация производительности и&nbsp;передовой опыт
+                                </li>
+                                <li class="activity-card__item">Устранение неполадок и&nbsp;решение сложных проблем</li>
+                            </ul>
+                        </div>
+                        <div class="activity-card__price" data-price="/ месяц">₽19999</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="partners" class="section partners">
+            <div class="container partners__container">
+                <h2 class="partners__title visually-hidden">Наши партнёры</h2>
+                <ul class="partners__list list-reset">
+                    <li class="partners__item"><a class="partners__link" href="https://www.mautomatics.ru/"><img
+                                class="partners__img" src="./images/partners_1.svg"
+                                alt="Перейти на сайт партнёра mautomatics"></a></li>
+                    <li class="partners__item"><a class="partners__link" href="https://breezart.ru/"><img
+                                class="partners__img" src="./images/partners_2.png"
+                                alt="Перейти на сайт партнёра breezart"></a></li>
+                </ul>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <address class="footer__address">
+                    <span>ООО &laquo;Соло Лаб&raquo;</span>
+                    <span>440013, г. Пенза, ул&nbsp;Клары Цеткин, стр.&nbsp;44а, офис&nbsp;49</span>
+                    <span>ИНН: 5800008738</span>
+                </address>
+            </div>
+
+            <div class="footer__center">
+                <img class="logo footer__logo" src="./images/logo.svg" alt="Логотип Соло Лаб">
+                <nav class="nav footer__nav">
+                    <ul class="nav__list list-reset">
+                        <li class="nav__item"><a class="nav__link link" href="#projects">Проекты</a></li>
+                        <li class="nav__item"><a class="nav__link link" href="#technologies">Технологии</a></li>
+                        <li class="nav__item"><a class="nav__link link" href="#work">Этапы</a></li>
+                        <li class="nav__item"><a class="nav__link link" href="#activity">Деятельность</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__right social">
+                <a class="social__button btn btn-reset" href="#" aria-label="Написать в телеграм">
+                    <svg class="social__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20ZM13.3929 18.1679C11.3894 19.0427 9.33089 19.9415 7.44854 20.9783L7.44841 20.9785C6.46551 21.6981 7.77198 22.2071 8.99754 22.6846C9.19238 22.7605 9.38518 22.8356 9.56641 22.9106C9.71721 22.957 9.87058 23.0058 10.026 23.0553C11.389 23.4896 12.9089 23.9738 14.2322 23.2454C16.4061 21.9967 18.4575 20.553 20.5074 19.1104C21.179 18.6377 21.8504 18.1652 22.5259 17.6997C22.5575 17.6795 22.5933 17.6563 22.6323 17.631C23.2078 17.258 24.502 16.4191 24.0233 17.5751C22.8912 18.8131 21.6787 19.909 20.4595 21.0108C19.6379 21.7534 18.8133 22.4987 18.0083 23.292C17.3071 23.8617 16.5791 25.0073 17.3642 25.805C19.1724 27.0709 21.009 28.3061 22.8444 29.5406C23.4417 29.9423 24.0388 30.344 24.6349 30.7466C25.645 31.5531 27.2238 30.9007 27.4459 29.6404C27.5446 29.0606 27.6438 28.4808 27.743 27.901C28.2909 24.6972 28.8391 21.4922 29.3234 18.2779C29.3892 17.7737 29.4638 17.2695 29.5384 16.7651C29.7193 15.5425 29.9005 14.3184 29.957 13.0892C29.8112 11.8626 28.3239 12.1323 27.4962 12.4081C23.2419 14.027 19.03 15.7658 14.8349 17.5353C14.3596 17.7458 13.8779 17.9562 13.3929 18.1679Z"
+                            fill="#333C4D" />
+                    </svg>
+                </a>
+                <a class="social__phone link" href="#">+7 (999) 999-99-99</a>
+                <a class="social__email link" href="#">info@solo-lab.ru</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
