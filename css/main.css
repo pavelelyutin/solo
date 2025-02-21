@@ -117,8 +117,58 @@ img {
     padding-bottom: 50px;
 }
 
+.burger {
+    z-index: 100;
+    display: none;
+    visibility: hidden;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.burger__line {
+    position: absolute;
+    height: 4px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: var(--color-black);
+    transform: scale(1);
+    transition: opacity 0.2s ease;
+}
+
+.burger.active .burger__line:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.burger.active .burger__line:nth-child(2) {
+    transform: scaleX(0);
+}
+
+.burger.active .burger__line:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.burger__line:nth-child(1) {
+    top: 25%;
+    left: 10%;
+}
+
+.burger__line:nth-child(2) {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.burger__line:nth-child(3) {
+    bottom: 25%;
+    left: 10%;
+}
+
 /* header */
 .header {
+    z-index: 100;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -144,7 +194,7 @@ img {
 }
 
 .link {
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 .link:focus-visible {
@@ -161,7 +211,7 @@ img {
 }
 
 .social__button svg path {
-    transition: fill .2s ease-in-out;
+    transition: fill 0.2s ease-in-out;
 }
 
 .social__button:focus-visible {
@@ -190,6 +240,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .hero__content {
@@ -265,6 +316,7 @@ img {
 .services-card__title {
     margin: 0;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .services-card__descr {
@@ -287,7 +339,7 @@ img {
 
 .section__title::after {
     position: absolute;
-    content: '';
+    content: "";
     left: 50%;
     transform: translateX(-50%);
     bottom: -20px;
@@ -373,7 +425,7 @@ img {
 
 .work__list::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 2px;
     height: 100%;
     top: 0;
@@ -398,7 +450,7 @@ img {
 
 .work-item::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -414,6 +466,7 @@ img {
     border-radius: var(--border-radius-s);
     padding: 30px 20px 30px 200px;
     background-color: var(--color-gray);
+    overflow: hidden;
 }
 
 .work-item__box::before {
@@ -487,7 +540,7 @@ img {
 
 .activity-card__item::before {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 4px;
     width: 15px;
@@ -523,6 +576,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 100px;
 }
 

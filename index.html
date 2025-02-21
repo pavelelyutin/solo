@@ -22,12 +22,18 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="container header__container">
-            <img class="logo" src="./images/logo.svg" alt="Логотип Соло Лаб">
+            <button class="header__burger burger btn-reset" aria-label="Открыть мобильное меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+            <img class="header__logo" src="./images/logo.svg" alt="Логотип Соло Лаб">
             <nav class="nav header__nav">
                 <ul class="nav__list list-reset">
                     <li class="nav__item"><a class="nav__link link" href="#projects">Проекты</a></li>
@@ -143,8 +149,6 @@
 
                     <li class="projects__card projects-card">
                         <div class="projects-card__hashtags">
-                            <span>new</span>
-                            <span>open source</span>
                             <span>new</span>
                         </div>
                         <img class="projects-card__img" src="./images/projects_2.png"
