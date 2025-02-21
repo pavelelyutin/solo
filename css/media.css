@@ -83,7 +83,7 @@
 
     /* .work */
     .work-item {
-        padding-left: 50px;
+        padding-left: 40px;
     }
 
     .work-item__box {
@@ -91,11 +91,11 @@
     }
 
     .work__list::before {
-        left: 20px;
+        left: 10px;
     }
 
     .work-item::after {
-        left: 20px;
+        left: 10px;
     }
 
     /* partners */
